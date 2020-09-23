@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: test
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/hateoas
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+#  jackson:
+#    serialization:
+#      wrap-root-value : true
+
+  jpa:
+    hibernate:
+        ddl-auto: create
+    properties:
+      hibernate:
+        #show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        default_batch_fetch_size: 100
+logging.level:
+  org.hibernate.SQL: debug
+# org.hibernate.type: trace
